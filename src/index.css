@@ -5,9 +5,88 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: whitesmoke;
+  height: 100vh;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+nav {
+  display: flex;
+  justify-content: space-between;
+  background-color: burlywood;
+  padding: .5rem 5rem;
+}
+nav h1 {
+  color: beige;
+}
+nav h1:hover {
+  text-decoration: underline 2px;
+  text-underline-offset: 2px;
+}
+nav button {
+  background-color: transparent;
+  border-radius: 10px;
+  border: 1px solid white;
+  padding: 10px;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 300ms ease-in-out;
+}
+nav button:hover {
+  background-color: beige;
+  color: cadetblue;
+}
+.grid {
+  place-items: center;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  grid-gap: 2rem 1rem;
+  padding: 1rem;
+  margin: 1rem;
+
+}
+
+.users {
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  background-color: beige;
+  border: 1px solid #222;
+  border-radius: 10px;
+  box-shadow: 10px 10px 1px #666;
+}
+.users img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.users:hover {
+  transform: scale(1.05);
+  transition: 300ms ease-in-out;
+}
+.details {
+  flex-direction: column;
+  display: flex;
+}
+.details span {
+  display: block;
+  font-size: 12px;
+  color: #666;
+}
+.details p {
+  font-size: 18px;
+  font-family: 'Lucida Sans', sans-serif;
+  color: cadetblue;
 }
